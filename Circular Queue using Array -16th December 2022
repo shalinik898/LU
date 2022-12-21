@@ -1,0 +1,81 @@
+//Implement Circular Queue using Array 
+
+#include <iostream>
+using namespace std;
+
+int size =5;
+int f=-1,r=-1,a[5];
+
+void enqueue(int n)
+{
+   if((r+1)%size == f)
+   cout<<"overflow";
+
+    else if(f==-1 && r==-1)
+    {
+        f++;
+        r++;
+        a[r]=n;
+    }
+    else
+    {
+        r = (r+1)%size;
+        a[r]=n;
+    }
+    
+}
+
+void dequeue()
+{
+   if(f==-1 && r==-1)
+   {
+       cout<<"underflow";
+   }
+   else if(f==r)
+   
+   {
+       f--;
+       r--;
+   }
+   
+   else 
+   
+  {
+  
+   f=(f+1)%size;
+   
+  }
+  }
+  
+  
+   
+
+
+void traversal()
+
+{
+    for(int i=f;i!=r ;i=(i+1)%size )
+    cout<<a[i]<<"\t";
+    cout<<a[r]<<"\t";
+    
+}
+
+
+int main() {
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+    
+    dequeue();
+    
+    enqueue(50);
+    
+    dequeue();
+
+    traversal();
+    
+
+    
+
+    return 0;
+}
