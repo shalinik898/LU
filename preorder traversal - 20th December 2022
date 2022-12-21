@@ -1,0 +1,22 @@
+class node{
+int data;
+node* left;
+node* right;
+}
+
+void preorder(root){
+if(root == NULL)
+
+{
+cout<< root->data;
+preorder(root -> left);
+preorder(root -> right);
+}
+
+}
+
+int main()
+{
+
+return 0;
+}
