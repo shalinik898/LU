@@ -1,3 +1,5 @@
+1-Implement preorder traversal 
+
 class node{
 int data;
 node* left;
@@ -20,3 +22,5 @@ int main()
 
 return 0;
 }
+
+
