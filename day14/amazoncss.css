@@ -1,0 +1,198 @@
+*{
+    padding: 0;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing : border-box;
+}
+
+
+/* suedo variable*/
+:root{
+
+    --color1:white;
+    --color2:#e36d12;
+    --colo3:rgb(215,214,214);
+
+    --bg-nav:#131921;
+    --bag-subnav:#232f3e;
+    --bg-body:#eaeded;
+
+}
+
+body{
+    background-color: var(--bg-body) ;
+}
+
+.d-flex{
+
+    display:flex;
+}
+
+ul{
+    list-style-type: none;;
+}
+a{
+    text-decoration: none;
+}
+
+nav{
+
+    width:100%;
+    background-color: var(--bg-nav);
+    align-items: center;
+
+}
+
+nav .nav-brand a{
+    display: flex;
+    text-align: center;
+    text-decoration:none;
+    padding:5px;
+    color:var(--color1);
+
+
+}
+
+nav .nav-brand a img{
+
+    width:100px;
+    margin:  20x 18px 0;
+}
+
+nav .nav-brand a span{
+    font-size: 14px;
+}
+
+nav .d-inline-block
+{
+    color: var(--color1);
+    font-size: small;
+    margin-left: 10px;
+}
+
+nav .d-inline-block li i{
+    padding: 10px;
+}
+
+
+nav .addr a{
+    color:var(--color1);
+    padding :10px;
+
+}
+
+nav .d-flex-search{
+    flex:1;
+    margin-left: 10px;
+
+
+}
+
+nav  .d-flex-search #allmenu{
+
+    border-radius: 5px 0px 0px 5px;
+
+
+}
+
+nav nav .d-flex-search #allmenu option{
+
+    background-color: var(--bg-body);
+    color: var(--bg-nav);
+}
+
+nav .d-flex-search input{
+
+    width: 75%;
+    padding: 10 px;
+    border: none;
+
+}
+
+nav .d-flex-search .fa-magnifying-glass{
+    background-color: var(--color2);
+    padding : 10 px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+/*country flag*/
+
+nav .countryflag{
+
+    color:var(--color1);
+    margin-left: 10px;
+}
+
+nav .countryflag span{
+
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+nav .countryflag i{
+
+    margin-left: 5px;
+}
+
+nav .nav_menu{
+    /* margin:0 10px; */
+    padding:10px;
+}
+
+nav .nav_menu li{
+    margin-left :10px;
+}
+
+nav .nav_menu li a{
+    color:var(--color1);
+    font-size: 12px;
+}
+
+nav .nav_menu li a span{
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+/* Submenu styling */
+
+.submenu{
+    background-color: var(--bag-subnav);
+    padding: 15px;
+}
+
+.submenu a{
+    font-size: 14px;
+    margin-left : 10px;;
+    color:var(--color1);
+}
+
+.submenupromo i{
+    padding: 6px;
+    border-radius: 3px;
+    background-color: var(--color2);
+    margin-left: 250px;
+
+}
+.submenupromo img{
+    width: 250px;
+    height: 30px;
+    
+}
+
+/* Banner styling */
+
+.banner{
+    width:100%;
+}
+
+.banner img{
+    width: 100%;
+}
+
+/* mask-image */
+
+.banner img{
+    width: 100%;
+    mask-image: linear-gradient(180deg,rgba(0,0,0,1),transparent);
+    
+}
