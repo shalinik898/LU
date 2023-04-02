@@ -1,0 +1,86 @@
+html,body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+}
+
+.sky,.road,.grass{
+    position: relative;
+}
+
+.sky{
+    background-color: skyblue;
+    height: 55%;
+}
+
+.cloud{
+    height: 40%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    opacity: 70%;
+}
+
+.cloud:hover{
+    transform: scaleX(3);
+    opacity: 150%;
+}
+
+.grass{
+    height: 15%;
+    width: 100%;
+    background:green;
+}
+
+.road{
+    height: 178px;
+    width: 100%;
+    background:dimgray;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+    box-sizing: border-box;
+}
+ 
+.divider{
+    width: 100%;
+    border: 4px dashed white;
+    position: absolute;
+    top: 50%;
+    box-sizing: border-box;
+}
+
+.audi, .maruti{
+    height: 70%;
+    position: absolute;
+}
+
+.audi{
+    bottom: 50%;
+    animation-name: driveaudi;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    animation-timing-function: linear;
+}
+
+.maruti{
+    top: 40%;
+    animation-name: drivemaruti;
+    animation-duration: 3s;
+    animation-iteration-count: 10;
+    animation-timing-function: linear;
+    
+}
+
+@keyframes driveaudi {
+    from{ transform: translateX(0px);}
+    to{ transform: translateX(1250px);}
+    
+}
+
+@keyframes drivemaruti {
+
+    from{ transform: translateX(0px);}
+    to{ transform: translateX(1250px);}
+}
+
