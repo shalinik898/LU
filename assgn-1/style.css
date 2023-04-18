@@ -1,0 +1,220 @@
+/* Reset some default styles */
+body, figure, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and font styles for body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Style the fixed header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    z-index: 100;
+}
+
+/* Style the navigation */
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Style the banner
+/* .banner {
+    height: 400px;
+    background-color: #ccc;
+    position: relative;
+} */
+
+/* Style the slider within the banner */
+/* .slider {
+    width: 100%;
+    height: 100%;
+    background-image: url('slider-img'); /* Replace with your slider image
+    background-size: cover;
+    background-position: center;
+} */
+
+
+/* body {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #111;
+  } */
+  
+  .slider-banner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 380px;
+    text-align: center;
+    margin-top: 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .slider-banner input { display: none; }
+  .slider-image {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: 6px solid white;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: left .2s ease-in;
+    overflow: hidden;
+  }
+  
+  .slider-image img { width: 100%; }
+  .nav label {
+    position: absolute;
+    top: 40%;
+    display: block;
+    color: rgba(255,255,255,.5);
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    opacity: 0;
+    z-index: 9;
+  }
+  
+  input:checked + .slider-image {
+    position: absolute;
+    display: inline-block;
+    opacity: 1; 
+    visibility: visible;
+    transition: left .2s ease-in;
+  }
+  
+  .nav label:hover { opacity: 1; }
+  .slider-image img:hover + .nav label { opacity: .75; }
+  .nav .prev { left: 0; border-radius: 0  10px 10px 0; }
+  .nav .next { right: 0; border-radius: 10px  0 0 10px; }
+  
+  .bullet-nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .bullet {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 10px;
+    background-color: #555;
+    border: 1px solid #111;
+  }
+  
+  .bullet:first-child { border-radius: 10px 0 0 10px; }
+  .bullet:last-child { border-radius: 0 10px 10px 0; }
+  
+  input#slideA:checked ~ .bullet-nav label#bulletA,
+  input#slideB:checked ~ .bullet-nav label#bulletB,
+  input#slideC:checked ~ .bullet-nav label#bulletC {
+    background-color: #FF6464;
+}
+
+/* Style the container for services, products, and footer sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* Style the heading and content within the container */
+.container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container p {
+    margin-bottom: 40px;
+    text-align: center;
+
+}
+
+/* Style the footer */
+/* footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Style the links within the footer 
+footer a {
+    color: #fff;
+    text-decoration: none;
+   
+} */
+
+.contact-section {
+    background-color: #f9f9f9;
+    text-align: left;
+  }
+  
+  .contact-section h2 {
+    font-size: 24px;
+  }
+  
+  .contact-section form {
+
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .contact-section input[type="text"],
+  .contact-section input[type="email"],
+  .contact-section textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .contact-section textarea {
+    height: 150px;
+  }
+  
+  .contact-section input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .contact-section input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

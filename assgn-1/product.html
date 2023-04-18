@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Project Template</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#footer">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <!-- <div class="banner">
+            <div class="slider"></div>
+        </div> -->
+        <div class="slider-banner">
+            <input type="radio" name="slider" id="slideA" checked/>
+            <div class="slider-image">
+              <img src="slider-img.jpg" />
+              <span class="nav">
+                <label for="slideC" class="prev">&lt;</label>
+                <label for="slideB" class="next">&gt;</label>
+              </span>
+            </div>
+          
+            <input type="radio" name="slider" id="slideB"/>
+            <div class="slider-image">
+                <img src="slider-img-1.jpg" />
+                <span class="nav">
+                <label for="slideA" class="prev">&lt;</label>
+                <label for="slideC" class="next">&gt;</label>
+              </span>
+            </div>
+          
+            <input type="radio" name="slider" id="slideC"/>
+            <div class="slider-image">
+                <img src="slider-img-2.jpg" />
+                <span class="nav">
+                <label for="slideB" class="prev">&lt;</label>
+                <label for="slideA" class="next">&gt;</label>
+              </span>
+            </div>
+          
+            <div class="bullet-nav">
+              <label for="slideA" id="bulletA" class="bullet"></label>
+              <label for="slideB" id="bulletB" class="bullet"></label>
+              <label for="slideC" id="bulletC" class="bullet"></label>
+            </div>
+          </div>
+    </section>
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>Here you can describe your services</p>
+        </div>
+    </section>
+    <section id="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <p>Here you can showcase your products</p>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <section class="contact-section">
+                <form action="#">
+                  <input type="text" name="name" placeholder="Your Name">
+                  <input type="email" name="email" placeholder="Your Email">
+                  <textarea name="message" placeholder="Your Message"></textarea>
+                  <input type="submit" value="Send">
+                </form>
+              </section>
+                          
+        </div>
+    </footer>
+</body>
+</html>
