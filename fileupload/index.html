@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File upload</title>
+    <style>
+        body{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 1.5rem;
+            background-color: beige;
+            color:lightslategray;     
+        }
+
+        input, button{
+
+            font:inherit;
+            width: max-content;
+            color:lightslategray;
+
+        }
+
+        form{
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 1.5rem;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Node js File Uploader</h1>
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="" id="myFiles" accept="images/*" multiple>
+        <button>Submit Images</button>
+
+    </form>
+
+    <h2></h2>
+    <h3></h3>
+
+    <script>
+        const form = document.getElementById(uploadForm)
+        const sendFiles = async() =>{
+            const myFiles = document.getElementById('myFiles');
+            const formData = new FormData();
+            Object.keys(myFiles).forEach( key => {
+                formData.append(myFiles.item(key).name), myFiles.item(key)
+            })
+        }
+
+        const response = await fetch('http://localhost:3050/upload' , {method: 'POST' , body: formData})
+        
+        const json = await response.json();
+        console.log(json);
+
+        const h2 = document.querySelector('h2');
+        h2.textContent = json?.status;
+
+
+        const h3 = document.querySelector('h3');
+        h3.textContent = json?.message;
+
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            sendFiles();
+        })
+
+    </script>
+    
+</body>
+</html>

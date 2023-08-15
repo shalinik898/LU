@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+
+    <body>
+        <%- include('./partials/nav.ejs') %>
+
+        <div class="details content">
+            <h3 class="blog-title"> <%=blogs.title %>  </h3>
+            <div class="content">
+                <p class="preview-text"><%=blogs.preview %> </p>
+                <p class="blog-body"><%=blogs.body %> </p>
+                <p class="blog-author"><%=blogs.author %> </p>
+            </div>
+            <a class="delete" data-doc="<%= blogs._id %>">Delete</a>
+        </div>
+
+        <%- include('./partials/footer.ejs') %>
+
+    <script>
+        const delBlog = document.querySelector('a.delete');
+        delBlog.addEventListener('click' , (e)=>{
+            const endpoint = `/blogs/${delBlog.dataset.doc}`
+            fetch(endpoint,{
+                method:'DELETE'
+            })
+            .then((response)=>{response.json()})
+            .then((data)=>window.location.href = data.redirect)
+            .catch((err)=>console.log(err))
+        })
+    </script>
+</body>
+</html>

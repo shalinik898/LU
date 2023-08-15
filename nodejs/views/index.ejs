@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+
+<body>
+    <!-- <nav>
+        <div class="site-title">
+            <a href="/">Phenix</a>
+            <p>This is esports game</p>
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">AboutUs</a></li>
+
+            <li><a href="/teams">Teams</a></li>
+            <li><a href="/blogs/Create">Create a Blog</a></li>
+
+
+        </ul>
+
+        
+    </nav> -->
+
+    <%- include('./partials/nav.ejs') %>
+    <div class="blog-content">
+        <p>All blogs</p>  
+        <% if(blogs.length > 0){ %> 
+            <% blogs.forEach( blogs => { %> 
+
+
+            <a class="singlelink" href="/blogs/<%= blogs._id %>">
+                <h3 class="blog-title"> <%= blogs.title %>  </h3>
+                <p class="preview-text"><%= blogs.preview %> </p>
+                <p class="blog-body"><%= blogs.body %> </p>
+                <p class="blog-author"><%= blogs.author %> </p>
+            </a>
+
+            <% }) %>
+        <% } else { %>
+            <p>There is no blog yet. Please write one here <a href="/blogs/create"></a> </p>
+        <% } %>
+
+
+     </div>
+
+     <%- include('./partials/footer.ejs') %>
+
+
+</body>
+</html>

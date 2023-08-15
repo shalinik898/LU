@@ -1,0 +1,10 @@
+{
+    "blogs": [
+        {"title": "Panchantra","preview":"This is a child hood book","author":"Shyam","cost":"25","id":"1"},
+        {"title": "Atmic Habits","preview":"This is a habits book","author":"Doemnico","cost":"110","id":"2"},
+        {"title": "Rich Dad Poor Dad","preview":"This is a financial book","author":"Yein Tang","cost":"190","id":"3"},
+        {"title": "Revolution 2020","preview":"This is a IIT based love story book","author":"Rahul","cost":"225","id":"3"}
+
+    ]
+
+}
